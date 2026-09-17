@@ -1,0 +1,7 @@
+# กฏการใช้ prisma
+
+เมื่อมีการปรับเปลี่ยนโครงสร้างข้อมูล (Database Schema)
+
+- ให้ใช้คำสั้่ง npx prisma generate เสมอ
+- ให้ใช้คำสั้่ง npx prisma db push เท่านั้น
+- ห้ามใช้คำสั้่ง npx prisma migrate dev โดยเด็ดขาด
