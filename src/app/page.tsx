@@ -1,3 +1,13 @@
-export default function Home() {
-  return <main>Follow-up Board</main>;
+import { redirect } from "next/navigation";
+import { getCurrentSession } from "@/lib/auth-session";
+
+export default async function Home() {
+  const session = await getCurrentSession();
+
+  if (!session) {
+    redirect("/sign-in");
+  }
+
+  redirect("/dashboard");
 }
+
